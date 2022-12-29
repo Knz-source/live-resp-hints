@@ -75,4 +75,14 @@ Isso irá gerar o código de hash do arquivo usando o algoritmo SHA256 e exibir 
 Exemplo de uso do comando hashcalc:
 
 Para verificar o código de hash de um arquivo chamado "malware.exe" usando o hashcalc, basta abrir o programa e selecionar o arquivo. Em seguida, escolha o algoritmo de hash desejado (como SHA256) e clique no botão "Calculate". O código de hash será exibido na tela.
+----
 
+Utils 
+
+Para declarar que um incidente é de fato um incidente malicioso, é importante levantar evidências suficientes para estabelecer um quadro claro do que aconteceu. Algumas das evidências que podem ser coletadas em um ambiente corporativo incluem:
+
+Registros de logs: É importante verificar os registros de logs do sistema e da rede para identificar atividades suspeitas ou anormalidades. Isso pode incluir logs de firewall, logs de servidores de aplicativos, logs de endpoints, entre outros.
+Arquivos e pastas suspeitos: É importante verificar se existem arquivos ou pastas suspeitos no sistema, como arquivos com nomes estranhos ou pastas criadas recentemente. Esses arquivos podem ser examinados mais de perto para determinar se são maliciosos ou não.
+Registros do registro do Windows: O registro do Windows armazena informações sobre as configurações do sistema e as atividades executadas no sistema. Verificar os registros do registro pode fornecer informações valiosas sobre o que aconteceu no sistema.
+Arquivos de memória: Coletar um dump da memória do sistema pode fornecer informações valiosas sobre o que estava acontecendo no sistema no momento em que o incidente ocorreu. Ferramentas como o Volatility podem ser usadas para analisar o dump da memória e identificar processos suspeitos ou atividades maliciosas.
+Arquivos de imagem de disco: Criar uma imagem do disco pode permitir a análise mais aprofundada de todo o sistema, incluindo arquivos e pastas ocultos e arquivos temporários. Ferramentas como o FTK Imager ou o dd podem ser usadas para criar a imagem do disco.
