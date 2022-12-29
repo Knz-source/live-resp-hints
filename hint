@@ -57,3 +57,22 @@ Analisar o código fonte do arquivo: Se o arquivo for um script (como um arquivo
 Descompilar o arquivo: É possível usar ferramentas como o .NET Reflector ou o JustDecompile para descompilar arquivos .exe e .dll e analisar o código fonte gerado. Isso pode ajudar a identificar funções ou módulos que podem ser suspeitos de ser parte de um malware.
 
 Verificar o código de hash do arquivo: É possível usar ferramentas como o certutil ou o hashcalc para gerar o código de hash (também conhecido como "checksum") de um arquivo e compará-lo com os códigos de hash de outros arquivos conhecidos como sendo malwares.
+
+---
+
+    Executar o arquivo em um ambiente virtualizado: É possível criar um ambiente virtualizado usando ferramentas como o VMware ou o VirtualBox e executar o arquivo suspeito nesse ambiente. Dessa forma, é possível monitorar o comportamento do arquivo e verificar se ele está tentando realizar ações suspeitas, como se comunicar com servidores remotos ou modificar arquivos do sistema.
+
+    Executar o arquivo em um sandbox: Ferramentas como o Malwr ou o Anubis permitem que você envie o arquivo suspeito para um ambiente de sandbox, onde ele é executado e monitorado em busca de comportamentos suspeitos.
+
+Exemplo de uso do comando certutil:
+
+Para verificar o código de hash de um arquivo chamado "malware.exe" usando o certutil, basta abrir o prompt de comando e digitar o seguinte comando:
+
+certutil -hashfile malware.exe SHA256
+
+Isso irá gerar o código de hash do arquivo usando o algoritmo SHA256 e exibir o resultado na tela.
+
+Exemplo de uso do comando hashcalc:
+
+Para verificar o código de hash de um arquivo chamado "malware.exe" usando o hashcalc, basta abrir o programa e selecionar o arquivo. Em seguida, escolha o algoritmo de hash desejado (como SHA256) e clique no botão "Calculate". O código de hash será exibido na tela.
+
