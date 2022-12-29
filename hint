@@ -86,3 +86,45 @@ Arquivos e pastas suspeitos: É importante verificar se existem arquivos ou past
 Registros do registro do Windows: O registro do Windows armazena informações sobre as configurações do sistema e as atividades executadas no sistema. Verificar os registros do registro pode fornecer informações valiosas sobre o que aconteceu no sistema.
 Arquivos de memória: Coletar um dump da memória do sistema pode fornecer informações valiosas sobre o que estava acontecendo no sistema no momento em que o incidente ocorreu. Ferramentas como o Volatility podem ser usadas para analisar o dump da memória e identificar processos suspeitos ou atividades maliciosas.
 Arquivos de imagem de disco: Criar uma imagem do disco pode permitir a análise mais aprofundada de todo o sistema, incluindo arquivos e pastas ocultos e arquivos temporários. Ferramentas como o FTK Imager ou o dd podem ser usadas para criar a imagem do disco.
+----
+
+
+Other utils 
+
+Executar o comando "tasklist" para verificar a lista de processos em execução no sistema. Isso pode ajudar a identificar processos suspeitos ou maliciosos que estejam sendo executados.
+
+Usar o comando "netstat -ano" para verificar a lista de conexões ativas no sistema. Isso pode ajudar a identificar conexões suspeitas ou maliciosas que estejam sendo estabelecidas com hosts externos.
+
+Executar o comando "reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run" para verificar os programas que estão sendo executados na inicialização do sistema. Isso pode ajudar a identificar programas suspeitos ou maliciosos que estejam sendo configurados para iniciar automaticamente.
+
+Utilizar o utilitário "Autoruns" para verificar os programas que estão sendo executados na inicialização do sistema, bem como os drivers e os serviços instalados. Isso pode ajudar a identificar componentes suspeitos ou maliciosos que estejam sendo configurados para iniciar automaticamente.
+
+Executar o comando "netstat -e" para verificar os erros de rede. Isso pode ajudar a identificar ataques de negação de serviço ou outras formas de ameaça que estejam sendo direcionadas ao sistema.
+
+Utilizar o utilitário "Process Monitor" para monitorar as atividades de arquivo, registro e rede do sistema em tempo real. Isso pode ajudar a identificar atividades suspeitas ou maliciosas que estejam ocorrendo no sistema.
+
+Executar o comando "sfc /scannow" para verificar a integridade dos arquivos do sistema e, se necessário, repará-los. Isso pode ajudar a identificar e corrigir problemas causados por malware ou outras formas de ameaça.
+
+Usar o utilitário "chkdsk" para verificar e reparar erros no sistema de arquivos. Isso pode ajudar a identificar e corrigir problemas causados por malware ou outras formas de ameaça.
+
+Executar o comando "vssadmin list shadows" para verificar as cópias aka snapshots, essas que são criadas pelo sistema de Volume Shadow Copy. Isso pode ajudar a identificar cópias suspeitas ou maliciosas que estejam sendo criadas pelo malware/autor malicioso.
+
+----
+
+Commands Defs
+
+chkdsk: este comando verifica e repara erros no sistema de arquivos. É importante rodá-lo para verificar se há problemas de corrupção de dados que possam ter sido causados pelo malware.
+
+netsh: este comando permite visualizar e modificar configurações de rede, como configurações de firewall e configurações de IP. É útil para verificar se o malware está tentando se conectar a servidores remotos ou está bloqueando o acesso à internet.
+
+tasklist: este comando lista todos os processos em execução no sistema, incluindo o nome do processo, o PID (identificador do processo) e o usuário que está executando o processo. Isso pode ser útil para identificar processos suspeitos ou maliciosos.
+
+netstat: este comando mostra todas as conexões de rede ativas e os processos que as estão utilizando. Isso pode ser útil para identificar conexões suspeitas ou maliciosas.
+
+reg query: este comando permite pesquisar o registro do Windows por valores ou chaves específicas. É útil para verificar se o malware adicionou entradas de registro maliciosas ou alterou entradas existentes.
+
+appwiz.cpl: este comando abre o painel de controle de programas e recursos, permitindo visualizar e desinstalar programas. É útil para verificar se o malware instalou algum software malicioso no sistema.
+
+eventvwr: este comando abre o visualizador de eventos do Windows, que armazena informações sobre erros e alertas ocorridos no sistema. É útil para verificar se o malware gerou algum evento de erro ou alerta.
+
+sysmon: este é um utilitário de terceiros que monitora atividades no sistema e gera logs detalhados. É útil para realizar uma análise aprofundada de atividades maliciosas no sistema.
