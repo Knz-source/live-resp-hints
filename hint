@@ -47,3 +47,13 @@ reg query: exibe o conteúdo de uma chave do registro do Windows. O registro é 
 sfc /scannow: verifica a integridade dos arquivos do sistema e, se necessário, os repara. O comando sfc (System File Checker) é um utilitário do Windows que verifica a integridade dos arquivos do sistema e, se necessário, os repara. O argumento /scannow faz com que o comando verifique todos os arquivos do sistema e tente reparar quaisquer arquivos danificados ou corrompidos. Isso pode ser útil para verificar se o ransomware danificou ou corrompeu quaisquer arquivos do sistema e, se necessário, para repará-los. É importante notar que o comando sfc só pode reparar arquivos que estejam presentes no disco de instalação do Windows, portanto, pode ser necessário fornecer o disco de instalação ou o arquivo ISO para que o comando possa reparar esses.
 diskpart: exibe e gerencia as partições do disco. O comando diskpart pode ser usado para listar as partições do disco, excluir partições, criar novas partições, etc. Isso pode ser útil para gerenciar as partições do disco e, por exemplo, criar uma nova partição para armazenar os arquivos que serão recuperados após o ataque de ransomware.
 bcdedit: exibe e gerencia as configurações do boot do sistema. O comando bcdedit pode ser usado para exibir e modificar as configurações do boot do sistema, como a ordem de inicialização dos dispositivos, a inicialização segura, etc. Isso pode ser útil para modificar as configurações do boot e, por exemplo, ativar a inicialização segura para evitar que o ransomware execute seu código durante o boot do sistema.
+
+---
+
+Verificar a assinatura do arquivo: Alguns malwares possuem assinaturas digital que os identificam como sendo arquivos maliciosos. É possível verificar a assinatura de um arquivo usando ferramentas como o Windows Defender ou o Microsoft Safety Scanner.
+
+Analisar o código fonte do arquivo: Se o arquivo for um script (como um arquivo .vbs, .js, .ps1, etc.), é possível abrir o código fonte e analisá-lo manualmente em busca de trechos de código suspeitos ou técnicas de ataque conhecidas.
+
+Descompilar o arquivo: É possível usar ferramentas como o .NET Reflector ou o JustDecompile para descompilar arquivos .exe e .dll e analisar o código fonte gerado. Isso pode ajudar a identificar funções ou módulos que podem ser suspeitos de ser parte de um malware.
+
+Verificar o código de hash do arquivo: É possível usar ferramentas como o certutil ou o hashcalc para gerar o código de hash (também conhecido como "checksum") de um arquivo e compará-lo com os códigos de hash de outros arquivos conhecidos como sendo malwares.
