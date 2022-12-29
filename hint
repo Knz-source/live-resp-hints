@@ -1,0 +1,12 @@
+Checklist de comandos para análise e hunting em ambiente comprometido
+
+    tasklist: exibe a lista de processos em execução no sistema.
+    netstat -ano: exibe a lista de conexões de rede ativas e o processo associado a cada uma delas.
+    netstat -anob: exibe informações adicionais sobre as conexões de rede, como o nome do arquivo executável associado ao processo.
+    netstat -anp TCP: exibe apenas as conexões TCP ativas e o processo associado a cada uma delas.
+    ipconfig /displaydns: exibe o cache de DNS do sistema.
+    route print: exibe a tabela de roteamento do sistema.
+    net use: exibe a lista de recursos de rede compartilhados pelo sistema.
+    sc query: exibe a lista de serviços em execução no sistema.
+    sc queryex: exibe informações adicionais sobre os serviços, como o nome do arquivo executável associado ao serviço.
+    sc qc: exibe a configuração de um serviço específico.
