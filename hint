@@ -10,3 +10,13 @@ Checklist de comandos para análise e hunting em ambiente comprometido
     sc query: exibe a lista de serviços em execução no sistema.
     sc queryex: exibe informações adicionais sobre os serviços, como o nome do arquivo executável associado ao serviço.
     sc qc: exibe a configuração de um serviço específico.
+    vssadmin list shadows: exibe a lista de instantâneos de volume do sistema (também conhecidos como "shadows").
+    wmic qfe list: exibe a lista de patches de segurança instalados no sistema.
+    wmic /output:<caminho>\hotfixes.txt qfe list: exibe a lista de patches de segurança instalados no sistema e salva em um arquivo de texto.
+    eventvwr: abre o Gerenciador de Eventos do Windows, onde é possível verificar os logs de sistema e de aplicativos.
+    wevtutil qe system /rd:true /f:text: exibe os logs de sistema e os salva em um arquivo de texto.
+    wevtutil qe application /rd:true /f:text: exibe os logs de aplicativos e os salva em um arquivo de texto.
+    sfc /scannow: verifica a integridade dos arquivos do sistema e, se necessário, os repara.
+    chkdsk /f /r: verifica a integridade do disco rígido e, se necessário, corrige erros.
+    diskpart: abre o utilitário de partição de disco do Windows, onde é possível gerenciar as partições de disco e o sistema de arquivos.
+    diskpart /s <caminho>\script.txt: executa um script de comandos do Diskpart a partir de um arquivo de texto.
